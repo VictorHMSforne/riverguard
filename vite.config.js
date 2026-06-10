@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/riverguard/'   // ← adicione esta linha
+  base: '/riverguard'   // ← adicione esta linha
 })
