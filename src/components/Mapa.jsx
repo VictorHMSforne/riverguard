@@ -23,7 +23,7 @@ const ecobarreirasComCoords = [
   { nome: 'Andrômeda',        local: 'Rio Itararé',        lixo: 58, status: 'alerta',  coords: [-23.8, -49.0] },
   { nome: 'Pavão',            local: 'Rio Chopim',         lixo: 41, status: 'alerta',  coords: [-25.0, -52.0] },
   { nome: 'Phoenix',          local: 'Rio Laranjinha',     lixo: 19, status: 'normal',  coords: [-23.5, -50.5] },
-  { nome: 'Hydra',            local: 'Rio das Pedras',     lixo: 73, status: 'crítico', coords: [-25.8, -49.8] },
+  { nome: 'Hydra',            local: 'Rio das Pedras',     lixo: 73, status: 'crítico', coords: [-25.436825, -51.453043] },
 ];
 
 function Mapa() {
