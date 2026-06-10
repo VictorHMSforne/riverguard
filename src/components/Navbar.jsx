@@ -27,7 +27,7 @@ function Navbar() {
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#equipe">Equipe</a>
         <a href="#contato">Contato</a>
-        <a href="#login" className="navbar-cta">Acessar sistema</a>
+        <a href="#login" className="navbar-cta">Acessar sistemaa</a>
       </div>
     </nav>
   );
