@@ -1,6 +1,6 @@
 function Equipe() {
   const membros = [
-    { nome: 'Gyugo',   papel: 'Fullstack & Arquitetura',  emoji: '⚙️' },
+    { nome: 'Victor',   papel: 'Fullstack & Arquitetura',  emoji: '⚙️' },
     { nome: 'Thiago',  papel: 'Frontend & UX',             emoji: '🎨' },
     { nome: 'Matheus', papel: 'Backend & Banco de Dados',  emoji: '🗄️' },
   ];
