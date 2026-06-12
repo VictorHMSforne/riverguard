@@ -3,6 +3,7 @@ import { LayoutDashboard, Users, Clock, TrendingUp } from 'lucide-react';
 import Mapa from '../components/Mapa';
 import AlertDrawer from '../components/AlertDrawer';
 import { ecobarreiras } from '../data/ecobarreirasData';
+import MenuLateral from '../components/MenuLateral';
 import '../App.css';
 
 function Dashboard() {
@@ -20,7 +21,9 @@ function Dashboard() {
   const criticas = ecobarreiras.filter(e => e.status === 'crítico').length;
 
   return (
+    
     <div className="dashboard">
+      <MenuLateral />
       {/* ── TOPO ── */}
       <div className="dash-topo">
         <h2 className="dash-titulo">
