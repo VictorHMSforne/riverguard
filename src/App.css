@@ -896,3 +896,182 @@
 .dash-mapa {
   margin-bottom: 2rem;
 }
+/* ────────────── SINO + DRAWER ────────────── */
+.sino-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2a2a3e;
+  border: 2px solid #444;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sino-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+.sino-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #e63946;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Drawer – menu lateral */
+.alert-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px; /* escondido inicialmente */
+  width: 380px;
+  height: 100vh;
+  background: #1e1e2e;
+  border-left: 2px solid #333;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.5);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.alert-drawer.aberto {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
+}
+
+.drawer-header h3 {
+  margin: 0;
+  color: #f4a261;
+  font-size: 1.2em;
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.drawer-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-gerar,
+.btn-resolver,
+.btn-limpar {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-gerar {
+  background: #2a9d8f;
+  color: white;
+}
+
+.btn-resolver {
+  background: #e63946;
+  color: white;
+}
+
+.btn-limpar {
+  background: #555;
+  color: white;
+}
+
+.btn-resolver:disabled,
+.btn-limpar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.drawer-lista {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.drawer-vazio {
+  color: #666;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.drawer-item {
+  background: #2a2a3e;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9em;
+}
+
+.drawer-item-num {
+  color: #888;
+  font-weight: bold;
+  min-width: 30px;
+}
+
+.drawer-item-msg {
+  flex: 1;
+  color: #fff;
+}
+
+.drawer-item-time {
+  color: #666;
+  font-size: 0.8em;
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Overlay (fundo escuro) */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* ────────────── FIM SINO + DRAWER ────────────── */
