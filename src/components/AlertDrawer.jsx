@@ -1,6 +1,6 @@
 // src/components/AlertDrawer.jsx
 import { useState } from 'react';
-import Alerta from '../models/Alerta.js';
+import Alerta from '../models/Alerta';
 import { ecobarreiras, filaAlertas } from '../data/ecobarreirasData';
 
 function AlertDrawer() {
