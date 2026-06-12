@@ -1,6 +1,7 @@
 // src/components/MenuLateral.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Menu, X, Waves, ClipboardList, Sprout, LogOut } from 'lucide-react';
 
 function MenuLateral() {
   const [aberto, setAberto] = useState(false);
@@ -13,7 +14,7 @@ function MenuLateral() {
       navigate('/'); // Volta para a Landing (página principal)
     } else {
       // Para as outras opções, você pode criar páginas depois
-      alert(`📍 Navegando para: ${rota}`);
+      alert(`Navegando para: ${rota}`);
       // navigate(rota); // descomente quando criar as páginas
     }
   };
@@ -26,14 +27,14 @@ function MenuLateral() {
         onClick={() => setAberto(!aberto)}
         title="Menu"
       >
-        {aberto ? '✕' : '☰'}
+        {aberto ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
       </button>
 
       {/* Drawer esquerdo */}
       <div className={`menu-drawer ${aberto ? 'aberto' : ''}`}>
         {/* Logo + Nome */}
         <div className="menu-logo">
-          <span className="menu-logo-emoji">🌊</span>
+          <span className="menu-logo-emoji"><Waves size={24} strokeWidth={1.5} /></span>
           <span className="menu-logo-nome">RiverGuard</span>
         </div>
 
@@ -45,13 +46,13 @@ function MenuLateral() {
             className="menu-item"
             onClick={() => handleNavigate('/cadastrar')}
           >
-            📋 Cadastrar Barreiras
+            <ClipboardList size={18} strokeWidth={1.5} /> Cadastrar Barreiras
           </button>
           <button
             className="menu-item"
             onClick={() => handleNavigate('/apadrinhar')}
           >
-            🌱 Apadrinhar Barreira
+            <Sprout size={18} strokeWidth={1.5} /> Apadrinhar Barreira
           </button>
         </nav>
 
@@ -62,7 +63,7 @@ function MenuLateral() {
           className="menu-item menu-sair"
           onClick={() => handleNavigate('/logout')}
         >
-          🚪 Sair
+          <LogOut size={18} strokeWidth={1.5} /> Sair
         </button>
       </div>
 
