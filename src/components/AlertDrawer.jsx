@@ -1,4 +1,4 @@
-// src/components/AlertDrawer.jsx
+
 import { useState } from 'react';
 import { Bell, Inbox, X, Plus, Check, Trash2, CheckCircle2 } from 'lucide-react';
 import Alerta from '../models/Alerta';

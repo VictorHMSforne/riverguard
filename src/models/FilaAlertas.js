@@ -1,6 +1,6 @@
 class FilaAlertas {
   constructor() {
-    this._itens = []; // array interno
+    this._itens = []; 
   }
 
   // FIFO: entra no final

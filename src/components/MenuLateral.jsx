@@ -1,4 +1,3 @@
-// src/components/MenuLateral.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Menu, X, Waves, ClipboardList, Sprout, LogOut } from 'lucide-react';
