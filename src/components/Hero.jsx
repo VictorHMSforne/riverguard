@@ -1,4 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function Hero() {
+    const irParaSobre = (e) => {
+        e.preventDefault();
+        document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <section className="hero">
             <div className="hero-texto">
@@ -17,10 +24,10 @@ function Hero() {
                 </p>
 
                 <div className="hero-botoes">
-                    <a href="#funcionalidades" className="btn btn-primario">
+                    <Link to="/dashboard" className="btn btn-primario">
                         Ver o sistema →
-                    </a>
-                    <a href="#sobre" className="btn btn-secundario">
+                    </Link>
+                    <a href="#sobre" className="btn btn-secundario" onClick={irParaSobre}>
                         Saiba mais
                     </a>
                 </div>

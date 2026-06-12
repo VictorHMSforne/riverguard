@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,6 +17,12 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Rolagem suave até a seção (evita conflito com o HashRouter)
+  const irParaSecao = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <span className="navbar-logo">
@@ -23,11 +30,11 @@ function Navbar() {
       </span>
 
       <div className="navbar-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#funcionalidades">Funcionalidades</a>
-        <a href="#equipe">Equipe</a>
-        <a href="#contato">Contato</a>
-        <a href="#login" className="navbar-cta">Acessar sistema</a>
+        <a href="#sobre" onClick={(e) => irParaSecao(e, 'sobre')}>Sobre</a>
+        <a href="#funcionalidades" onClick={(e) => irParaSecao(e, 'funcionalidades')}>Funcionalidades</a>
+        <a href="#equipe" onClick={(e) => irParaSecao(e, 'equipe')}>Equipe</a>
+        <a href="#contato" onClick={(e) => irParaSecao(e, 'contato')}>Contato</a>
+        <Link to="/login" className="navbar-cta">Acessar sistema</Link>
       </div>
     </nav>
   );

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../App.css';
 
 function Login() {
@@ -48,10 +48,13 @@ function Login() {
         </form>
 
         <p className="login-link">
-          Não tem conta? <a href="/cadastro">Cadastre-se</a>
+          Não tem conta?{' '}
+          <a href="#cadastro" onClick={(e) => { e.preventDefault(); alert('Cadastro em breve.'); }}>
+            Cadastre-se
+          </a>
         </p>
         <p className="login-voltar">
-          <a href="/">← Voltar ao início</a>
+          <Link to="/">← Voltar ao início</Link>
         </p>
       </div>
     </div>
