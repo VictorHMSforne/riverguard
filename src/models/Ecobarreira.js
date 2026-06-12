@@ -7,7 +7,7 @@ class Ecobarreira {
     this.equipe = equipe;     // objeto Equipe
     this.status = status;     // 'normal' | 'alerta' | 'crítico'
     this.update = new Date(); // data da última atualização
-    this.historicoLixo = [];  // 📋 LISTA para armazenar histórico
+    this.historicoLixo = [];  // LISTA para armazenar histórico
   }
 
   // Método: atualiza o nível de lixo

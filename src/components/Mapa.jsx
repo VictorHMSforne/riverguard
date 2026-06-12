@@ -50,4 +50,4 @@ function Mapa() {
   );
 }
 
-export default Mapa;   // ✅ LINHA QUE GARANTE O EXPORT DEFAULT
+export default Mapa;   // LINHA QUE GARANTE O EXPORT DEFAULT
