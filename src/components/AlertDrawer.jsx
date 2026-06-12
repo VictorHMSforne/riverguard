@@ -1,5 +1,6 @@
 // src/components/AlertDrawer.jsx
 import { useState } from 'react';
+import { Bell, Inbox, X, Plus, Check, Trash2, CheckCircle2 } from 'lucide-react';
 import Alerta from '../models/Alerta';
 import { ecobarreiras, filaAlertas } from '../data/ecobarreirasData';
 
@@ -12,7 +13,7 @@ function AlertDrawer() {
     const aleatorio = ecobarreiras[Math.floor(Math.random() * ecobarreiras.length)];
     const alerta = new Alerta(
       aleatorio.status,
-      `⚠️ ${aleatorio.nome}: ${aleatorio.lixo}% - ${aleatorio.status}`,
+      `${aleatorio.nome}: ${aleatorio.lixo}% - ${aleatorio.status}`,
       aleatorio
     );
     filaAlertas.enfileirar(alerta);
@@ -42,7 +43,7 @@ function AlertDrawer() {
         onClick={() => setAberto(!aberto)}
         title="Notificações"
       >
-        🔔
+        <Bell size={22} strokeWidth={1.5} />
         {naoLidos > 0 && <span className="sino-badge">{naoLidos}</span>}
       </button>
 
@@ -50,25 +51,31 @@ function AlertDrawer() {
       <div className={`alert-drawer ${aberto ? 'aberto' : ''}`}>
         {/* Cabeçalho do drawer */}
         <div className="drawer-header">
-          <h3>📋 Notificações</h3>
-          <button className="drawer-close" onClick={() => setAberto(false)}>✕</button>
+          <h3><Inbox size={18} strokeWidth={1.5} /> Notificações</h3>
+          <button className="drawer-close" onClick={() => setAberto(false)}>
+            <X size={18} strokeWidth={1.5} />
+          </button>
         </div>
 
         {/* Botões de ação */}
         <div className="drawer-acoes">
-          <button onClick={gerarAlerta} className="btn-gerar">➕ Gerar Alerta</button>
+          <button onClick={gerarAlerta} className="btn-gerar">
+            <Plus size={16} strokeWidth={1.5} /> Gerar Alerta
+          </button>
           <button onClick={resolverPrimeiro} className="btn-resolver" disabled={alertas.length === 0}>
-            ✅ Resolver Primeiro
+            <Check size={16} strokeWidth={1.5} /> Resolver Primeiro
           </button>
           <button onClick={limparFila} className="btn-limpar" disabled={alertas.length === 0}>
-            🗑️ Limpar Tudo
+            <Trash2 size={16} strokeWidth={1.5} /> Limpar Tudo
           </button>
         </div>
 
         {/* Lista de alertas */}
         <div className="drawer-lista">
           {alertas.length === 0 ? (
-            <p className="drawer-vazio">Nenhum alerta pendente 🎉</p>
+            <p className="drawer-vazio">
+              <CheckCircle2 size={16} strokeWidth={1.5} /> Nenhum alerta pendente
+            </p>
           ) : (
             alertas.map((alerta, index) => (
               <div

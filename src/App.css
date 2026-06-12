@@ -970,16 +970,21 @@
 }
 
 .drawer-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
   color: #f4a261;
   font-size: 1.2em;
 }
 
 .drawer-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   color: #888;
-  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -993,6 +998,10 @@
 .btn-gerar,
 .btn-resolver,
 .btn-limpar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 10px 14px;
   border: none;
   border-radius: 8px;
@@ -1028,6 +1037,10 @@
 }
 
 .drawer-vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   color: #666;
   text-align: center;
   margin-top: 40px;
