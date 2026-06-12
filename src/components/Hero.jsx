@@ -1,6 +1,3 @@
-import RiverWave from './RiverWave';
-
-
 function Hero() {
     return (
         <section className="hero">
@@ -30,7 +27,11 @@ function Hero() {
             </div>
 
             <div className="hero-visual">
-                <RiverWave />
+                <img
+                    src="https://i.pinimg.com/originals/6d/24/ea/6d24eaae3569951d44b540a9abd8e594.gif"
+                    alt="Rio em movimento"
+                    className="hero-gif"
+                />
             </div>
         </section>
     );

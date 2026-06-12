@@ -3,7 +3,11 @@ function Sobre() {
     <section id="sobre" className="sobre">
       <div className="sobre-container">
         <div className="sobre-visual">
-          <span className="sobre-emoji">🌊</span>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6XAb_jyQa1r_2Z4LONVnmEsrRQ1xKuzPoTw&s"
+            alt="Rio monitorado pelo RiverGuard"
+            className="sobre-img"
+          />
         </div>
 
         <div className="sobre-conteudo">
