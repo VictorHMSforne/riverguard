@@ -1044,3 +1044,140 @@
 }
 
 /* ────────────── FIM SINO + DRAWER ────────────── */
+
+/* ────────────── MENU LATERAL ESQUERDO ────────────── */
+.menu-hamburguer {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #2a2a3e;
+  border: 2px solid #444;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.menu-hamburguer:hover {
+  background: #3a3a5e;
+}
+
+/* Drawer esquerdo */
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  left: -320px; /* escondido */
+  width: 300px;
+  height: 100vh;
+  background: #1e1e2e;
+  border-right: 2px solid #333;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+  z-index: 1101;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.menu-drawer.aberto {
+  left: 0;
+}
+
+.menu-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.menu-logo-emoji {
+  font-size: 2.5em;
+}
+
+.menu-logo-nome {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #f4a261;
+  letter-spacing: 1px;
+}
+
+.menu-divisor {
+  height: 1px;
+  background: #333;
+  margin: 12px 0;
+}
+
+.menu-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item {
+  background: none;
+  border: none;
+  color: #ddd;
+  font-size: 1em;
+  padding: 14px 16px;
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-item:hover {
+  background: #2a2a3e;
+  color: #fff;
+}
+
+.menu-sair {
+  margin-top: auto;
+  color: #e63946;
+}
+
+.menu-sair:hover {
+  background: #3a1a1a;
+  color: #ff6b6b;
+}
+
+/* Overlay do menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+/* ────────────── FIM MENU LATERAL ────────────── */
+
+/* ────────────── EQUIPE ────────────── */
+.membro-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;            /* faz o círculo */
+  overflow: hidden;              /* corta o que passar */
+  margin: 0 auto 15px auto;
+  border: 3px solid #2a9d8f;     /* borda verde (opcional) */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.membro-avatar img {
+  width: 100%;                   /* ocupa toda a largura do círculo */
+  height: 100%;                  /* ocupa toda a altura */
+  object-fit: cover;             /* 🔥 ESSA É A CHAVE! Corta/ajusta a imagem */
+  display: block;                /* remove espaçamento extra */
+}
