@@ -24,7 +24,7 @@ const ecobarreiras = [
 ];
 
 // ─── CRIANDO A FILA DE ALERTAS (instância global) ───
-import FilaAlertas from '../models/FilaAlertas';
+import FilaAlertas from '../models/FilaAlertas.js';
 const filaAlertas = new FilaAlertas();
 
 // ─── EXPORTANDO TUDO ───
