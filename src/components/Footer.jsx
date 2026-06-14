@@ -5,7 +5,7 @@ function Footer() {
         River<span className="footer-destaque">Guard</span>
       </div>
       <p className="footer-texto">
-        Projeto Acadêmico · Engenharia de Software · Unicesumar · 2025
+        Projeto Acadêmico · Engenharia de Software · Unicesumar · 2026
       </p>
     </footer>
   );
